@@ -12,13 +12,13 @@
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32F107VC</Device>
+          <Device>STM32F103ZE</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x2000FFFF) IROM(0x8000000-0x803FFFF) CLOCK(25000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x2000FFFF) IROM(0x8000000-0x807FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32F10x.s" ("STM32 Startup Code")</StartupFile>
-          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_CL -FS08000000 -FL040000)</FlashDriverDll>
-          <DeviceId>4889</DeviceId>
+          <FlashDriverDll>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000)</FlashDriverDll>
+          <DeviceId>4216</DeviceId>
           <RegisterFile>stm32f10x_lib.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -99,11 +99,11 @@
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments></SimDllArguments>
           <SimDlgDll>DARMSTM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pSTM32F107VC</SimDlgDllArguments>
+          <SimDlgDllArguments>-pSTM32F103ZE</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
           <TargetDlgDll>TARMSTM.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pSTM32F107VC</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-pSTM32F103ZE</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -127,7 +127,7 @@
           <Target>
             <UseTarget>1</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>0</RunToMain>
+            <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
             <RestoreWatchpoints>1</RestoreWatchpoints>
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
@@ -192,8 +192,8 @@
             <AdsLsun>1</AdsLsun>
             <AdsLven>1</AdsLven>
             <AdsLsxf>1</AdsLsxf>
-            <RvctClst>0</RvctClst>
-            <GenPPlst>0</GenPPlst>
+            <RvctClst>1</RvctClst>
+            <GenPPlst>1</GenPPlst>
             <AdsCpuType>"Cortex-M3"</AdsCpuType>
             <RvctDeviceName></RvctDeviceName>
             <mOS>0</mOS>
@@ -268,7 +268,7 @@
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x40000</Size>
+                <Size>0x80000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -293,7 +293,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x40000</Size>
+                <Size>0x80000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -333,7 +333,7 @@
             <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>0</OneElfS>
+            <OneElfS>1</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -345,7 +345,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\simple-gui\GUI\inc;..\simple-gui\HMI\inc;..\simple-gui\DemoProc\inc;..\simple-gui\portable\inc;..\cpu\inc;..\cpu\Core\inc;..\cpu</IncludePath>
+              <IncludePath>..\simple-gui\GUI\inc;..\simple-gui\HMI\inc;..\simple-gui\DemoProc\inc;..\simple-gui\portable\inc;..\cpu\inc;..\cpu\Core\inc;..\cpu;..\dev</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,8 +396,33 @@
           <GroupName>rtt</GroupName>
         </Group>
         <Group>
+          <GroupName>dev</GroupName>
+          <Files>
+            <File>
+              <FileName>dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\dev\dev.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\dev\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\dev\driver_config.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>sgui-portable</GroupName>
           <Files>
+            <File>
+              <FileName>YLF320240A.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\simple-gui\portable\src\YLF320240A.c</FilePath>
+            </File>
             <File>
               <FileName>base_timer.c</FileName>
               <FileType>1</FileType>
@@ -452,11 +477,6 @@
               <FileName>usart_stdio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\simple-gui\portable\src\usart_stdio.c</FilePath>
-            </File>
-            <File>
-              <FileName>YLF320240A.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\simple-gui\portable\src\YLF320240A.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -611,6 +631,16 @@
         <Group>
           <GroupName>cpu</GroupName>
           <Files>
+            <File>
+              <FileName>cpu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\cpu\cpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\cpu\stm32io.c</FilePath>
+            </File>
             <File>
               <FileName>STM32F10x.s</FileName>
               <FileType>2</FileType>

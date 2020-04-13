@@ -1,0 +1,8 @@
+/src/projects/lists/*.i
+/src/projects/objs/*.o
+/src/projects/JLink Regs CM3.txt
+/src/projects/objs
+/src/projects/lists
+/src/projects/*.bak
+/src/projects/JLinkLog.txt
+/src/projects/JLinkSettings.ini

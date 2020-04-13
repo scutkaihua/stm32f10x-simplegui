@@ -3,14 +3,14 @@
 
 /* Screen 1: List Components. */
 /* Start screen with list. */
-#define SCR1_TITLE						("åˆ—è¡¨ç»„ä»¶")
-#define SCR1_LIST_ITEM1					("åŸºç¡€ç»˜å›¾")
-#define SCR1_LIST_ITEM2					("æ–‡æœ¬")
-#define SCR1_LIST_ITEM3					("è¾“å…¥æ¡†")
-#define SCR1_LIST_ITEM4					("å®æ—¶æ›²çº¿")
-#define SCR1_LIST_ITEM5					("èœå•")
-#define SCR1_LIST_ITEM6					("æ¶ˆæ¯æ¡†")
-#define SCR1_LIST_ITEM7					("è°ƒæ•´æ›²çº¿")
+#define SCR1_TITLE						("ÁĞ±í×é¼ş")
+#define SCR1_LIST_ITEM1					("»ù´¡»æÍ¼")
+#define SCR1_LIST_ITEM2					("ÎÄ±¾")
+#define SCR1_LIST_ITEM3					("ÊäÈë¿ò")
+#define SCR1_LIST_ITEM4					("ÊµÊ±ÇúÏß")
+#define SCR1_LIST_ITEM5					("²Ëµ¥")
+#define SCR1_LIST_ITEM6					("ÏûÏ¢¿ò")
+#define SCR1_LIST_ITEM7					("µ÷ÕûÇúÏß")
 
 /* Screen 2: Basic Paint*/
 /* No text used. */
@@ -20,11 +20,11 @@
 #define SCR3_TEXT_MIN_NUM				("1+2+8/4*5=13")
 #define SCR3_TEXT_INNER_8				("Hello Simple GUI.")
 #define SCR3_TEXT_INNER_12            	("Welcome!")
-#define SCR3_TEXT_EXTEN_12				("æˆ‘ä¸å–œæ¬¢è¿™ä¸ªã€‚")
-#define SCR3_TEXT_MULTILINE_12			("è¿™é‡Œæ˜¯12åƒç´ çš„å¤šè¡Œæ–‡æœ¬æ¼”ç¤ºã€‚")
+#define SCR3_TEXT_EXTEN_12				("ÎÒ²»Ï²»¶Õâ¸ö¡£")
+#define SCR3_TEXT_MULTILINE_12			("ÕâÀïÊÇ12ÏñËØµÄ¶àĞĞÎÄ±¾ÑİÊ¾¡£")
 
 /* Screen 4: Variable box. */
-#define SCR4_VAR_BOX_TITLE				("è¾“å…¥æ¡†")
+#define SCR4_VAR_BOX_TITLE				("ÊäÈë¿ò")
 #define SCR4_HELP_NOTICE				("Press TAB to switch focus.\nUp&Down to change value.\nSend \"SPACE\" to continue.")
 
 /* Screen 5: Realtime graph. */
@@ -45,6 +45,6 @@
 #define SCR6_SUB_MENU_ITEM4				("Sub 4")
 
 /* Screen 7: Notice box. */
-#define SCR7_NOTICE_TEXT			    ("æ¬¢è¿ä½¿ç”¨SimpleGUI!")
+#define SCR7_NOTICE_TEXT			    ("»¶Ó­Ê¹ÓÃSimpleGUI!")
 
 #endif // _INCLUDE_DEMO_RESOURCE_UTF8_H_

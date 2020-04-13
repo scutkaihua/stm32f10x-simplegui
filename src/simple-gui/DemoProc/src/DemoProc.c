@@ -82,8 +82,8 @@ HMI_ENGINE_RESULT InitializeHMIEngineObj(void)
 	SGUI_SystemIF_MemorySet(&g_stDemoEngine, 0x00, sizeof(HMI_ENGINE_OBJECT));
 #ifdef _SIMPLE_GUI_IN_VIRTUAL_SDK_
 	/* Initialize display size. */
-	g_stDeviceInterface.stSize.iWidth = 128;
-	g_stDeviceInterface.stSize.iHeight = 64;
+	g_stDeviceInterface.stSize.iWidth = 320;
+	g_stDeviceInterface.stSize.iHeight = 240;
 	/* Initialize interface object. */
 	g_stDeviceInterface.fnSetPixel = SGUI_SDK_SetPixel;
 	g_stDeviceInterface.fnGetPixel = SGUI_SDK_GetPixel;
@@ -99,8 +99,8 @@ HMI_ENGINE_RESULT InitializeHMIEngineObj(void)
 	extern unsigned int SGUI_SDK_GetKeyEventData(void);
 //	#error Add screen device object initialize process here.
 	/* Initialize display size. */
-	g_stDeviceInterface.stSize.iWidth = 128;
-	g_stDeviceInterface.stSize.iHeight = 64;
+	g_stDeviceInterface.stSize.iWidth = 320;
+	g_stDeviceInterface.stSize.iHeight = 240;
 	/* Initialize interface object. */
 	g_stDeviceInterface.fnSetPixel = SGUI_SDK_SetPixel;
 	g_stDeviceInterface.fnGetPixel = SGUI_SDK_GetPixel;
@@ -334,8 +334,8 @@ bool SysTickTimerTriggered(void)
 #else
 	//#error Add sys-tick timer trigger process here.
 	{
-		extern void CheckEventFlag(int idx);
-		CheckEventFlag(1);
+		extern bool CheckEventFlag(int idx);
+		return CheckEventFlag(1);
 	}
 #endif
 }
@@ -357,8 +357,8 @@ bool RTCTimerTriggered(void)
 #else
 	//#error Add RTC timer trigger process here.
 	{
-		extern void CheckEventFlag(int idx);
-		CheckEventFlag(2);
+		extern bool CheckEventFlag(int idx);
+		return CheckEventFlag(2);
 	}
 #endif
 }
@@ -380,8 +380,8 @@ bool UserEventTriggered(void)
 #else
 	//#error Add user event trigger process here.
 	{
-		extern void CheckEventFlag(int idx);
-		CheckEventFlag(3);
+		extern bool CheckEventFlag(int idx);
+		return CheckEventFlag(3);
 	}
 #endif
 }

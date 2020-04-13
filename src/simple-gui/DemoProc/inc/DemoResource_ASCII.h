@@ -1,4 +1,4 @@
-ifndef _INCLUDE_DEMO_RESOURCE_UTF8_H_
+#ifndef _INCLUDE_DEMO_RESOURCE_UTF8_H_
 #define _INCLUDE_DEMO_RESOURCE_UTF8_H_
 
 /* Screen 1: List Components. */
@@ -10,6 +10,7 @@ ifndef _INCLUDE_DEMO_RESOURCE_UTF8_H_
 #define SCR1_LIST_ITEM4					("Realtime graph")
 #define SCR1_LIST_ITEM5					("Menu")
 #define SCR1_LIST_ITEM6					("Notice box")
+#define SCR1_LIST_ITEM7					("Change curve")
 
 /* Screen 2: Basic Paint*/
 /* No text used. */

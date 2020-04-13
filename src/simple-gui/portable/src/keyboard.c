@@ -141,9 +141,4 @@ KEY_STATE KB_CheckKeyState(uint8_t uiKeyCode)
 }
 
 
-uint16_t SGUI_SDK_GetKeyEventData()
-{
- //·µ»Ø¼üÖµ
- return 0;
-}
 

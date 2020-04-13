@@ -1,8 +1,8 @@
 #ifndef _INCLUDE_SCREEN_H__
 #define _INCLUDE_SCREEN_H__
 
-#define LCD_SIZE_WIDTH      (128)
-#define LCD_SIZE_HEIGHT     (64)
+#define LCD_SIZE_WIDTH      (320)
+#define LCD_SIZE_HEIGHT     (240)
 #define LCD_SIZE_COLUMNS    (LCD_SIZE_WIDTH)
 #define LCD_SIZE_PAGES      (LCD_SIZE_HEIGHT/8)
 

@@ -2,6 +2,9 @@
 #define _INCLUDE_RESOURCE_H_
 
 #include "SGUI_Typedef.h"
+
+#define _SIMPLE_GUI_DEMO_ONLY_ASCII_
+
 #ifdef _SIMPLE_GUI_DEMO_ONLY_ASCII_
 #include "DemoResource_ASCII.h"
 #else
